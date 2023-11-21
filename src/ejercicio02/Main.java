@@ -7,7 +7,10 @@ public class Main {
 
 	public static void main(String[] args) {
 		
+		// numeroA: uno de los numeros introducidos por el usuario
 		int numeroA=0; 
+		
+		// numeroB: otro de los numeros introducidos por el usuario
 		int numeroB=0;
 		
 		// Inicia el Scanner
