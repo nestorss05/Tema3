@@ -16,6 +16,9 @@ public class Main {
 		// opcion: opcion elegida para la formula a aplicar
 		int opcion = 0;
 
+		// Resultado: resultado final de la operacion
+		double resultado;
+
 		// Inicia el Scanner
 		Scanner sc = new Scanner(System.in);
 
@@ -62,15 +65,12 @@ public class Main {
 			}
 		} while ((opcion != 1) && (opcion != 2)); // Fin Do While 3
 
-		// If-Else
-		if (opcion == 1) {
-			// El programa continuara por AreaCilindro
-			AreaCilindro.areacilindro(altura, radio, opcion);
-		} else {
-			// El programa continuara por VolumenCilindro
-			VolumenCilindro.volumencilindro(altura, radio, opcion);
-		} // Fin If-Else
-
+		// El programa continuara por Cilindro
+		resultado = Cilindro.cilindro(opcion, altura, radio);
+		
+		// Imprime el resultado por pantalla
+		System.out.println(resultado);
+		
 		// Cierra el Scanner
 		sc.close();
 
