@@ -9,6 +9,9 @@ public class Main {
 		// caracter: caracter introducido por el usuario
 		String caracter;
 		
+		// esVocal: booleana que te informara si la letra introducida es vocal o no
+		boolean esVocal=false;
+		
 		// Inicia el Scanner
 		Scanner sc = new Scanner(System.in);
 		
@@ -21,7 +24,14 @@ public class Main {
 		
 		case "a", "e", "i", "o", "u", "b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "ñ", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z" -> {
 			// Caso de ser una letra: El programa le informara si tu letra es vocal o no
-			System.out.println(Vocales.vocales(caracter)); 
+			esVocal = Vocales.vocales(caracter, esVocal); 
+			
+			// If-Else: te dice si la respuesta es vocal o no
+			if (esVocal) {
+				System.out.println("Es vocal");
+			} else {
+				System.out.println("No es vocal");
+			} // Fin If-Else
 		}
 		
 		default -> {
@@ -29,7 +39,7 @@ public class Main {
 			System.out.println("La respuesta introducida no es una letra. El programa procedera a terminarse");
 		}
 		
-		}
+		} // Fin Switch
 		
 		// Cierra el Scanner
 		sc.close();

@@ -2,7 +2,7 @@ package ejercicio04;
 
 public class Vocales {
 	
-	public static boolean vocales(String caracter) {
+	public static boolean vocales(String caracter, boolean esLocal) {
 		
 		// esVocal: booleana que te informara si la letra introducida es vocal o no
 		boolean esVocal=false;
