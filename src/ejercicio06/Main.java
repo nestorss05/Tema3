@@ -17,7 +17,7 @@ public class Main {
 		int opcion = 0;
 
 		// Resultado: resultado final de la operacion
-		double resultado;
+		double resultado = 0;
 
 		// Inicia el Scanner
 		Scanner sc = new Scanner(System.in);
@@ -66,7 +66,7 @@ public class Main {
 		} while ((opcion != 1) && (opcion != 2)); // Fin Do While 3
 
 		// El programa continuara por Cilindro
-		resultado = Cilindro.cilindro(opcion, altura, radio);
+		resultado=Cilindro.cilindro(opcion, altura, radio, resultado);
 		
 		// Imprime el resultado por pantalla
 		System.out.println(resultado);
