@@ -8,10 +8,10 @@ public class Main {
 	public static void main(String[] args) {
 
 		// altura: altura del cilindro
-		int altura = 0;
+		double altura = 0;
 
 		// radio: radio del cilindro
-		int radio = 0;
+		double radio = 0;
 
 		// opcion: opcion elegida para la formula a aplicar
 		int opcion = 0;
