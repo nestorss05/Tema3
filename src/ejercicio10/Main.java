@@ -1,5 +1,8 @@
 package ejercicio10;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -12,15 +15,48 @@ public class Main {
 
 		// año: año de la fecha
 		int año = 0;
+		
+		// esCorrecta: booleana que te informara si la fecha esta bien o no
+		boolean esCorrecta = false;
 
-		// El dia se pedira en Dia
-		Dia.calcularDias(dia);
+		// Inicia el Scanner
+		Scanner sc = new Scanner(System.in);
+
+		// Pide al usuario el dia
+		try {
+			System.out.println("Inserta el dia");
+			dia = sc.nextInt();
+		} catch (InputMismatchException e) {
+			System.out.println("ERROR: El dia esta mal introducido");
+			sc.nextLine();
+		}
 
 		// Pide al usuario el mes
-		Mes.calcularMes(mes);
+		try {
+			System.out.println("Inserta el mes");
+			mes = sc.nextInt();
+		} catch (InputMismatchException e) {
+			System.out.println("ERROR: El dia esta mal introducido");
+			sc.nextLine();
+		}
 
 		// Pide al usuario el año
-		Año.calcularAños(año);
+		try {
+			System.out.println("Inserta el año");
+			año = sc.nextInt();
+		} catch (InputMismatchException e) {
+			System.out.println("ERROR: El dia esta mal introducido");
+			sc.nextLine();
+		}
+
+		// La fecha se comprobara si esta bien o no en comprobarFechas
+		esCorrecta = Fechas.comprobarFechas(dia, mes, año);
+		
+		// Informale al usuario si la fecha es correcta o no
+		System.out.println(esCorrecta);
+
+		// Cierra el Scanner
+		sc.close();
 
 	}
 
