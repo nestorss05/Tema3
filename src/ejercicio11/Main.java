@@ -37,7 +37,7 @@ public class Main {
 				System.out.println("ERROR: Dato introducido invalido");
 				sc.nextLine();
 			}
-		} while (num1 < -12345678); // Fin Do While
+		} while (num1 == -12345678); // Fin Do While
 
 		// Pide al usuario otro numero
 		do {
@@ -48,7 +48,7 @@ public class Main {
 				System.out.println("ERROR: Dato introducido invalido");
 				sc.nextLine();
 			}
-		} while (num2 < -12345678); // Fin Do While
+		} while (num2 == -12345678); // Fin Do While
 
 		// Pide al usuario un numero double
 		do {

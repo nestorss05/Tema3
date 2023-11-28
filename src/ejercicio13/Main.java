@@ -1,4 +1,4 @@
-package ejercicio12;
+package ejercicio13;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -7,17 +7,17 @@ public class Main {
 
 	public static void main(String[] args) {
 
+		// numero: numero solitario introducido por el usuario
+		int numero = -12345678;
+
 		// num1: primer numero introducido por el usuario
 		int num1 = -12345678;
 
 		// num2: segundo numero introducido por el usuario
 		int num2 = -12345678;
 
-		// num3: tercer numero introducido por el usuario
-		int num3 = -12345678;
-
 		// resultado: resultado que salga de la funcion
-		double resultado;
+		int resultado;
 
 		// Inicia el Scanner
 		Scanner sc = new Scanner(System.in);
@@ -33,10 +33,10 @@ public class Main {
 			}
 		} while (num1 == -12345678); // Fin Do While
 
-		// Pide al usuario otro numero
+		// Pide al usuario un numero
 		do {
 			try {
-				System.out.println("Inserta otro numero");
+				System.out.println("Inserta un numero");
 				num2 = sc.nextInt();
 			} catch (InputMismatchException e) {
 				System.out.println("ERROR: Dato introducido invalido");
@@ -44,27 +44,27 @@ public class Main {
 			}
 		} while (num2 == -12345678); // Fin Do While
 
-		// Pide al usuario un ultimo numero
+		// Pide al usuario el numero solitario
 		do {
 			try {
-				System.out.println("Inserta un ultimo numero");
-				num3 = sc.nextInt();
+				System.out.println("Inserta un numero solitario");
+				numero = sc.nextInt();
 			} catch (InputMismatchException e) {
 				System.out.println("ERROR: Dato introducido invalido");
 				sc.nextLine();
 			}
-		} while (num3 < -12345678); // Fin Do While
+		} while (numero == -12345678); // Fin Do While
 
-		// El resultado de Medias.media se guardara en resultado
-		resultado = Medias.media(num1, num2);
+		// El resultado de Sumas.sumaEnteros se guardara en resultado
+		resultado = Sumas.sumaEnteros(numero);
 
-		// Devuelve el resultado total
+		// Muestra el resultado por pantalla
 		System.out.println(resultado);
 
-		// El siguiente resultado de Medias.media se guardara en resultado
-		resultado = Medias.media(num1, num2, num3);
+		// El resultado de Sumas.sumaEnteros se guardara en resultado
+		resultado = Sumas.sumaEnteros(num1, num2);
 
-		// Devuelve el resultado total
+		// Muestra el resultado por pantalla
 		System.out.println(resultado);
 
 		// Cierra el Scanner
