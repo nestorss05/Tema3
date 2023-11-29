@@ -56,16 +56,16 @@ public class Main {
 		} while (numero == -12345678); // Fin Do While
 
 		// El resultado de Sumas.sumaEnteros se guardara en resultado
-		resultado = Sumas.sumaEnteros(numero);
-
-		// Muestra el resultado por pantalla
-		System.out.println(resultado);
-
-		// El resultado de Sumas.sumaEnteros se guardara en resultado
 		resultado = Sumas.sumaEnteros(num1, num2);
 
 		// Muestra el resultado por pantalla
-		System.out.println(resultado);
+		System.out.println("Suma de los dos primeros numeros: " + resultado);
+
+		// El resultado de Sumas.sumaEnteros se guardara en resultado
+		resultado = Sumas.sumaEnteros(numero);
+
+		// Muestra el resultado por pantalla
+		System.out.println("Suma del numero solitario: " + resultado);
 
 		// Cierra el Scanner
 		sc.close();
