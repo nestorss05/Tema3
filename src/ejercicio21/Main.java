@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
-	
+
 	// Inicia el Scanner
 	public static Scanner sc = new Scanner(System.in);
 
@@ -13,14 +13,62 @@ public class Main {
 		// respuesta: respuesta introducida en la funcion pideNumero
 		int respuesta;
 
-		// numero: numero introducido en pideNumero
-		double numero;
+		// numero1: primer numero a operar
+		double numero1;
 
-		// Muestra el menu
-		respuesta = mostrarMenu();
+		// numero2: segundo numero a operar
+		double numero2;
 
-		// Pide la opcion al usuario
-		numero = pideNumero();
+		// continuar: hasta que la respuesta sea 0, no se parara de pedir preguntas,
+		// estara en un bucle
+		boolean continuar = true;
+
+		// Do While
+		do {
+			// Muestra el menu
+			respuesta = mostrarMenu();
+
+			// Si la respuesta es 0, continuar sera falso, y tumbara el bucle entero
+			if (respuesta == 0) {
+				break;
+			}
+
+			// Pide el primer numero al usuario
+			numero1 = pideNumero();
+
+			// Pide el segundo numero al usuario
+			numero2 = pideNumero();
+
+			// Se definira op para la clase Operaciones, con numero1 y numero2 como
+			// variables
+			Operaciones op = new Operaciones(numero1, numero2);
+
+			// Switch: por cada respuesta, se hara una operacion o otra, llamando a op y a
+			// su respectiva funcion
+			switch (respuesta) {
+			case 1 -> {
+				System.out.println(op.suma());
+			}
+			case 2 -> {
+				System.out.println(op.resta());
+			}
+			case 3 -> {
+				System.out.println(op.multiplicacion());
+			}
+			case 4 -> {
+				System.out.println(op.division());
+			}
+			case 5 -> {
+				System.out.println(op.maximo());
+			}
+			case 6 -> {
+				System.out.println(op.minimo());
+			}
+			default -> {
+				System.out.println("ERROR: Opcion invalida. Se volvera al menu de inicio");
+			}
+			} // Fin Switch
+		} while (continuar == true); // Fin Do While
 
 		// Cierra el Scanner
 		sc.close();
@@ -70,8 +118,8 @@ public class Main {
 
 	static double pideNumero() {
 
-		// numero1: numero introducido por el usuario
-		double numero1 = -1;
+		// numero: numero introducido por el usuario
+		double numero = -1;
 
 		// correcto: booleana que comprobara si el resultado introducido es correcto
 		boolean correcto = false;
@@ -80,7 +128,7 @@ public class Main {
 		do {
 			try {
 				System.out.println("Inserta un numero");
-				numero1 = sc.nextDouble();
+				numero = sc.nextDouble();
 				correcto = true;
 			} catch (InputMismatchException e) {
 				System.out.println("ERROR: Respuesta invalida");
@@ -90,7 +138,7 @@ public class Main {
 		} while (!correcto); // Fin Do While
 
 		// Devuelve el resultado al main
-		return numero1;
+		return numero;
 
 	}
 
