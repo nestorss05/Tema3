@@ -19,10 +19,6 @@ public class Main {
 		// numero2: segundo numero a operar
 		double numero2;
 
-		// continuar: hasta que la respuesta sea 0, no se parara de pedir preguntas,
-		// estara en un bucle
-		boolean continuar = true;
-
 		// Do While
 		do {
 			// Muestra el menu
@@ -68,7 +64,7 @@ public class Main {
 				System.out.println("ERROR: Opcion invalida. Se volvera al menu de inicio");
 			}
 			} // Fin Switch
-		} while (continuar == true); // Fin Do While
+		} while (respuesta != 0); // Fin Do While
 
 		// Cierra el Scanner
 		sc.close();
