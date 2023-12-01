@@ -8,6 +8,11 @@ public class Operaciones {
 	// num2: numero que viene de la clase Main
 	double num2;
 
+	// Constructor sin parametros
+	public Operaciones() {
+		super();
+	}
+	
 	// Operaciones: establecera los valores de los numeros traidos del Main hacia
 	// los valores de los numeros en esta clase
 	public Operaciones(double num1, double num2) {
