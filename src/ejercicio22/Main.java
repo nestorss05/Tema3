@@ -56,8 +56,6 @@ public class Main {
 	}
 
 	public static int menu() {
-		// correcto: comprueba si la respuesta es correcta o no
-		boolean correcto = false;
 
 		// opcion: opcion elegida por el usuario
 		int opcion = -1;
@@ -73,15 +71,13 @@ public class Main {
 				opcion = sc.nextInt();
 				if (opcion < 0 || opcion > 2) {
 					System.out.println("ERROR: Respuesta invalida");
-				} else {
-					correcto = true;
 				}
 			} catch (InputMismatchException e) {
-				System.err.println("ERROR: Respuesta invalida");
+				System.out.println("ERROR: Respuesta invalida");
 			} finally {
 				sc.nextLine();
 			}
-		} while (!correcto); // Fin Do While
+		} while (opcion < 0 || opcion > 2); // Fin Do While
 
 		// Devuelve opcion al main
 		return opcion;
@@ -102,7 +98,7 @@ public class Main {
 				respuesta = sc.nextDouble();
 				correcto = true;
 			} catch (InputMismatchException e) {
-				System.err.println("ERROR: Respuesta invalida");
+				System.out.println("ERROR: Respuesta invalida");
 			} finally {
 				sc.nextLine();
 			}
@@ -127,7 +123,7 @@ public class Main {
 				respuesta = sc.nextDouble();
 				correcto = true;
 			} catch (InputMismatchException e) {
-				System.err.println("ERROR: Respuesta invalida");
+				System.out.println("ERROR: Respuesta invalida");
 			} finally {
 				sc.nextLine();
 			}
