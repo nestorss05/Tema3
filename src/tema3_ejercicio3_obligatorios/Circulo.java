@@ -1,4 +1,4 @@
-package ejercicio23;
+package tema3_ejercicio3_obligatorios;
 
 public class Circulo {
 

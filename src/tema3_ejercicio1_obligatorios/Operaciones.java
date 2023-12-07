@@ -1,4 +1,4 @@
-package ejercicio21;
+package tema3_ejercicio1_obligatorios;
 
 public class Operaciones {
 

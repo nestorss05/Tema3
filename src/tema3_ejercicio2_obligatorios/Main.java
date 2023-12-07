@@ -1,4 +1,4 @@
-package ejercicio22;
+package tema3_ejercicio2_obligatorios;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -20,8 +20,15 @@ public class Main {
 		// alto: altura de un rectangulo
 		double alto;
 
-		// Do While: se iran iniciando las otras funciones 
+		// Do While: se iran iniciando las otras funciones
 		do {
+
+			// ancho sera el ancho elegido en pideAncho()
+			ancho = pideAncho();
+
+			// alto sera el alto elegido en pideAlto
+			alto = pideAlto();
+
 			// respueta sera la opcion elegida en menu()
 			respuesta = menu();
 
@@ -30,15 +37,9 @@ public class Main {
 				break;
 			}
 
-			// ancho sera el ancho elegido en pideAncho()
-			ancho = pideAncho();
-
-			// alto sera el alto elegido en pideAlto
-			alto = pideAlto();
-
 			// Se definira rec para la clase Rectangulo
 			Rectangulo rec = new Rectangulo(ancho, alto);
-			
+
 			// Se procedera a hacer la operacion dependiendo de la opcion elegida
 			if (respuesta == 1) {
 				// Perimetro
@@ -47,7 +48,7 @@ public class Main {
 				// Area
 				System.out.println(rec.area());
 			}
-			
+
 		} while (respuesta != 0); // Fin Do While
 
 		// Cierra el Scanner

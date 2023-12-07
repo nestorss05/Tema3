@@ -1,4 +1,4 @@
-package ejercicio22;
+package tema3_ejercicio2_obligatorios;
 
 public class Rectangulo {
 

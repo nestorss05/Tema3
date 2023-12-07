@@ -1,4 +1,4 @@
-package ejercicio23;
+package tema3_ejercicio3_obligatorios;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -18,6 +18,10 @@ public class Main {
 
 		// Do While: llamara a las funciones
 		do {
+
+			// Para insertar el radio se llamara a pideRadio();
+			radio = pideRadio();
+
 			// Para elegir la opcion se llamara a menu();
 			opcion = menu();
 
@@ -25,16 +29,14 @@ public class Main {
 			if (opcion == 0) {
 				break;
 			}
-
-			// Para insertar el radio se llamara a pideRadio();
-			radio = pideRadio();
-
+			
+			// Se definira circ para la clase Circulo
 			Circulo circ = new Circulo(radio);
 
 			// If-Else: se ejecutara una funcion o otra dependiendo de la opcion
 			if (opcion == 1) {
 				// Circunferencia
-				System.out.println(circ.circunferencia()); 
+				System.out.println(circ.circunferencia());
 			} else {
 				// Area
 				System.out.println(circ.area());

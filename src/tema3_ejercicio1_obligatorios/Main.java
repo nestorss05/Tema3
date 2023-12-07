@@ -1,4 +1,4 @@
-package ejercicio21;
+package tema3_ejercicio1_obligatorios;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
