@@ -3,6 +3,29 @@ package tema3_ejercicio1_obligatorios;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/*
+ * Ejemplo:
+ * 
+ * respuesta: 1, numero1: 10, numero2: 32 | Esperaba: 42.0 | Resultado: 42.0
+ * 
+ * respuesta: 2, numero1: 10, numero2: 32 | Esperaba: -22.0 | Resultado: -22.0
+ * 
+ * respuesta: 3, numero1: 10, numero2: 32 | Esperaba: 320.0 | Resultado: 320.0
+ * 
+ * respuesta: 4, numero1: 10, numero2: 32 | Esperaba: 0.3125 | Resultado: 0.3125
+ * 
+ * respuesta: 5, numero1: 10, numero2: 32 | Esperaba: 32.0 | Resultado: 32.0
+ * 
+ * respuesta: 6, numero1: 10, numero2: 32 | Esperaba: 10.0 | Resultado: 10.0
+ * 
+ * respuesta: 7 | Esperaba: Opcion invalida | Resultado: Opcion invalida
+ * 
+ * respuesta: 0 | Esperaba: Salida del programa | Resultado: Salida del programa
+ * 
+ * respuesta: 3, numero1: 10, numero2: aaa | Esperaba: Respuesta invalida | Resultado: Respuesta invalida
+ * 
+ */
+
 public class Main {
 
 	// Inicia el Scanner

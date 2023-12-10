@@ -3,6 +3,21 @@ package tema3_ejercicio3_obligatorios;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/*
+ * Ejemplo:
+ * 
+ * radio: 5, respuesta: 1 | Esperaba: 31.41592653589793 | Resultado: 31.41592653589793
+ * 
+ * radio: 5, respuesta: 2 | Esperaba: 78.53981633974483 | Resultado: 78.53981633974483
+ * 
+ * radio: 5, respuesta: 0 | Esperaba: Salida del programa | Resultado: Salida del programa
+ * 
+ * radio: aaa | Esperaba: Respuesta invalida | Resultado: Respuesta invalida
+ * 
+ * radio: 5, respuesta: aaa | Esperaba: Respuesta invalida | Resultado: Respuesta invalida
+ * 
+ */
+
 public class Main {
 
 	// Inicia el Scanner
